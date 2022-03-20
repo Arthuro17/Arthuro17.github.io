@@ -58,15 +58,15 @@
           <form name="contact-form" class="col-lg-6 offset-lg-3 mt-5">
             <div class="mb-3">
               <label for="nama" class="form-label"><strong>Nama</strong></label>
-              <input type="text" class="form-control" id="nama" name="nama">
+              <input type="text" class="form-control" id="nama">
             </div>
             <div class="mb-3">
               <label for="nomorwa" class="form-label"><strong>Nomor WhatsApp</strong></label>
-              <input type="text" class="form-control" id="nomorwa" name="nomor">
+              <input type="text" class="form-control" id="nomorwa">
             </div>
             <div class="mb-3">
               <label for="jasa" class="form-label"><strong>Pilih Jasa</strong></label>
-              <select id="jasa" class="form-select" name="jasa">
+              <select id="jasa" class="form-select">
                 <option>Foto/Video Wedding</option>
                 <option>Foto/Video Fashion</option>
                 <option>Foto/Video Product</option>
@@ -74,16 +74,14 @@
             </div>
             <div class="mb-3">
               <label for="budget" class="form-label"><strong>Budget</strong></label>
-              <input type="text" class="form-control" id="budget" placeholder="ex: 1.000.000" name="budget">
+              <input type="text" class="form-control" id="budget" placeholder="ex: 1.000.000">
             </div>
             <div class="mb-3">
               <label for="konsep" class="form-label"><strong>Jelaskan konsep keinginan anda!</strong></label>
-              <textarea class="form-control" id="konsep" rows="3" name="konsep"></textarea>
+              <textarea class="form-control" id="konsep" rows="3"></textarea>
             </div>
             <div>
-              <button type="submit" class="btn text-light w-100" style="background-color: #1a1e22;">
-                <a href="thanks.html" class="text-light" style="text-decoration:none">Kirim</a>
-              </button>
+              <a href="thanks.html" class="btn text-light w-100" style="background-color: #1a1e22;">Kirim</a>
             </div>
           </form>
         </div>
@@ -152,17 +150,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
     crossorigin="anonymous"></script>
-
-    <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbxMjQ48IuKSgM8jv32fkZV2b0Qmd2VUwRbVP3tr8ebjj0WyszdZjgvXFFGhcoVyXIrjUw/exec'
-      const form = document.forms['contact-form']
-    
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => console.log('Success!', response))
-          .catch(error => console.error('Error!', error.message))
-      })
-    </script>
   </body>
 </html>
